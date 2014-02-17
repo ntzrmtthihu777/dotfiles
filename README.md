@@ -2,7 +2,7 @@ Installation
 ------------
 
     git clone git://github.com/Remedan/dotvim.git ~/.vim
-    sh ./install.sh
+    sh .vim/install.sh
 
 Plugins included
 ----------------
