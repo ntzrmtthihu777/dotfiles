@@ -1,11 +1,11 @@
-Installation:
--------------
+Installation
+------------
 
     git clone git://github.com/Remedan/dotvim.git ~/.vim
-	./install.sh
+    sh ./install.sh
 
-Plugins included:
------------------
+Plugins included
+----------------
 
 * vim-airline
 * NERD Tree
