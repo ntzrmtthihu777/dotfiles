@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""
-"		Behaviour			"
+"        Behaviour          "
 """""""""""""""""""""""""""""
 set nocompatible	" Use don't behave like Vi
 
@@ -19,7 +19,7 @@ set hidden			" Allow opening new buffers without saving changes
 set laststatus=2    " Wider status line, needed for powerline
 
 """""""""""""""""""""""""""""
-"		Formatting			"
+"        Formatting         "
 """""""""""""""""""""""""""""
 set tabstop=4		" Tab width
 set softtabstop=4	" Width of inserted tab =
@@ -32,7 +32,7 @@ filetype plugin on
 filetype indent on
 
 """""""""""""""""""""""""""""
-"		Interface			"
+"        Interface          "
 """""""""""""""""""""""""""""
 set number			" Show line numbers
 set showmatch		" When inserting brackets, highlight the matching one
@@ -44,14 +44,14 @@ set ruler			" Show line and cursor position
 syntax on			" Enable syntax highlighting
 
 """""""""""""""""""""""""""""
-"		Plugins				"
-""""""""""""""""""""""""""""
+"        Plugins            "
+"""""""""""""""""""""""""""""
 call pathogen#infect()			" Pathogen takes care of loading the plugins
 let g:airline_powerline_fonts = 1 	" Enable nice powerline fonts
 let g:airline#extensions#tabline#enabled = 1	" Enable nice tabline
 
 """""""""""""""""""""""""""""
-"		Key mapping			"
+"        Key mapping        "
 """""""""""""""""""""""""""""
 " j and k go up/down a row in wrapped lines
 nnoremap j gj
@@ -74,7 +74,7 @@ nnoremap td  :tabclose<CR>
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""
-"		Colours and GUI		"
+"        Colours and GUI    "
 """""""""""""""""""""""""""""
 if &term=='xterm'	" xterm supports 256 colours but doesn't set this
 	set t_Co=256
