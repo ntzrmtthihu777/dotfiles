@@ -47,7 +47,7 @@ syntax on			" Enable syntax highlighting
 "		Plugins				"
 """"""""""""""""""""""""""""
 call pathogen#infect()			" Pathogen takes care of loading the plugins
-let g:airline_powerline_fonts = 1	" Enable nice powerline fonts
+let g:airline_powerline_fonts = 1 	" Enable nice powerline fonts
 let g:airline#extensions#tabline#enabled = 1	" Enable nice tabline
 
 """""""""""""""""""""""""""""

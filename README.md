@@ -1,11 +1,11 @@
 Installation:
+-------------
 
-    git clone git://github.com/nelstrom/dotvim.git ~/.vim
-    ln -s ~/.vim/vimrc ~/.vimrc
-    cd ~/.vim
-    git submodule init
-    git submodule update	
+    git clone git://github.com/Remedan/dotvim.git ~/.vim
+	./install.sh
 
-Font for powerline:
+Plugins included:
+-----------------
 
-    http://github.com/Lokaltog/powerline/tree/develop/font
+* vim-airline
+* NERD Tree
