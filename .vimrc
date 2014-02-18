@@ -83,6 +83,8 @@ if &t_Co==256
 	colorscheme jellybeans	" Use nicer colourscheme
 endif
 if has("gui_running")
+	colorscheme jellybeans	" Gui sometimes doesn't set t_Co
+
 	set guioptions+=TlrbRLe	" Bug workaround
 	set guioptions-=TlrbRLe	" Hide the toolbar and scrollbars, use text tabs
 
