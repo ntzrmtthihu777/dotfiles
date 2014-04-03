@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""
 "        Behaviour          "
 """""""""""""""""""""""""""""
-set nocompatible    " Use don't behave like Vi
+set nocompatible    " Don't behave like Vi
 
 set wildmenu        " Enhanced command line completion
 set wildmode=longest,list   " Complete the longest match, then list others
@@ -24,7 +24,7 @@ set laststatus=2    " Wider status line, needed for powerline
 set tabstop=4       " Width of the tab character
 set softtabstop=4   " How many columns the tab key inserts
 set shiftwidth=4    " Width of 1 indentation level
-set expandtab       " Expand tabs
+set expandtab       " Expand tabs into spaces
 set smartindent     " Smart C-like autoindenting
 
 " Determine indentation rules by filetype
@@ -40,6 +40,8 @@ set incsearch       " Highlight search results as the search is typed
 set showcmd         " Show command on the bottom
 set ruler           " Show line and cursor position
 set colorcolumn=80  " Highlight the 80th column
+set listchars=trail:· " Show trailing space
+set list            " Enable the above settings
 
 syntax on           " Enable syntax highlighting
 
