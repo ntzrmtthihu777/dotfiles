@@ -40,7 +40,7 @@ set incsearch       " Highlight search results as the search is typed
 set showcmd         " Show command on the bottom
 set ruler           " Show line and cursor position
 set colorcolumn=80  " Highlight the 80th column
-set listchars=trail:· " Show trailing space
+set listchars=tab:>-,trail:· " Show tabs and trailing space
 set list            " Enable the above settings
 
 syntax on           " Enable syntax highlighting
