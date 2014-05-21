@@ -50,7 +50,7 @@ syntax on           " Enable syntax highlighting
 """""""""""""""""""""""""""""
 call pathogen#infect()          " Pathogen takes care of loading the plugins
 
-let g:airline_powerline_fonts = 1   " Enable nice powerline fonts
+let g:airline_powerline_fonts = 0   " Enable nice powerline fonts
 let g:airline#extensions#tabline#enabled = 1    " Enable nice tabline
 
 let delimitMate_expand_cr = 1
