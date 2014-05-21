@@ -10,6 +10,7 @@ Plugins included
 ----------------
 
 * vim-airline
+* syntastic
 * NERD Tree
 * delimitMate
 * Colorizer
