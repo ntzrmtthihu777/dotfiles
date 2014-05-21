@@ -12,3 +12,4 @@ Plugins included
 * vim-airline
 * NERD Tree
 * delimitMate
+* Colorizer
