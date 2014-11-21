@@ -14,3 +14,4 @@ Plugins included
 * NERD Tree
 * delimitMate
 * Colorizer
+* MatchTags
