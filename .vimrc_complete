@@ -78,6 +78,9 @@ nnoremap td  :tabclose<CR>
 " F2 toggles NERDTree view
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
 
+" F3 toggles paste mode
+set pastetoggle=<F3>
+
 """""""""""""""""""""""""""""
 "        Colours and GUI    "
 """""""""""""""""""""""""""""
