@@ -1,5 +1,5 @@
 # i3wm config
-**This config currently has my resolution (for a compton trick), direct path to my wallpaper and other such thing in it. These need to be edited before use!**
+**This config currently has my resolution (for a compton trick), direct path to my wallpaper and other such things in it. These need to be edited before use!**
 
 Uses:
 * [termite](https://github.com/thestinger/termite) as terminal emulator
