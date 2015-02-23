@@ -1,4 +1,4 @@
-# .i3
+# i3wm config
 Uses:
 * [termite](https://github.com/thestinger/termite) as terminal emulator
 * [compton](https://github.com/chjj/compton) as compositor
@@ -6,7 +6,10 @@ Uses:
 * [Solarized](http://ethanschoonover.com/solarized) as colour palette
 
 Stolen bits:
-* [Solarized for i3](http://ethanschoonover.com/solarized).
-* [Lock script](http://plankenau.com/blog/post-10/gaussianlock).
-* [Power management menu](https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout/?answer=1927#post-id-1927).
+* [Solarized for i3](http://ethanschoonover.com/solarized)
+* [Lock script](http://plankenau.com/blog/post-10/gaussianlock)
+* [Power management menu](https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout/?answer=1927#post-id-1927)
 * [Termite colours](https://github.com/thestinger/termite/blob/master/config)
+
+## Screenshot
+![screenshot](https://github.com/Remedan/doti3/blob/master/screen.png)
