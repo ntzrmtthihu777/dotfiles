@@ -1,0 +1,12 @@
+# .i3
+Uses:
+* [termite](https://github.com/thestinger/termite) as terminal emulator
+* [compton](https://github.com/chjj/compton) as compositor
+* [Inconsolata](https://github.com/chjj/compton) and [Font Awesome](http://fortawesome.github.io/Font-Awesome/) as fonts
+* [Solarized](http://ethanschoonover.com/solarized) as colour palette
+
+Stolen bits:
+* [Solarized for i3](http://ethanschoonover.com/solarized).
+* [Lock script](http://plankenau.com/blog/post-10/gaussianlock).
+* [Power management menu](https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout/?answer=1927#post-id-1927).
+* [Termite colours](https://github.com/thestinger/termite/blob/master/config)
