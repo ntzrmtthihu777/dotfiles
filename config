@@ -127,10 +127,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Power control mode
-set $power_control "[l]ock [s]uspend [h]ybernate [r]reboot [p]oweroff"
+set $power_control "[l]ock log[o]ut [s]uspend [h]ybernate [r]eboot [p]oweroff"
 mode  $power_control {
 
         bindsym l exec ~/.i3/lock.sh; mode "default"
+        bindsym o exec i3-msg exit; mode "default"
         bindsym s exec systemctl suspend; mode "default"
         bindsym h exec systemctl hybernate; mode "default"
         bindsym r exec systemctl reboot; mode "default"
@@ -160,7 +161,7 @@ for_window [class="Firefox"] border none
 for_window [class="Termite"] border 1pixel
 
 # Floating windows
-for_window [class="feh"] floating enable
+#for_window [class="feh"] floating enable
 
 # Colors
 # solarized accents
