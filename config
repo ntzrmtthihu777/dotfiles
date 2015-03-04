@@ -151,6 +151,10 @@ bindsym XF86AudioMute exec amixer -q set Master toggle && killall -SIGUSR1 i3sta
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 && killall -SIGUSR1 i3status
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && killall -SIGUSR1 i3status
 
+# Printscreen saves screenshot (with shift only focused window)
+bindsym --release Print exec scrot
+bindsym --release Shift+Print exec scrot -u
+
 # Applications
 bindsym $mod+i exec firefox
 
