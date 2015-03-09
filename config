@@ -223,14 +223,13 @@ bar {
 exec setxkbmap -layout 'us,cz(qwerty)' && setxkbmap -option 'grp:shift_caps_toggle'
 
 # Applets
-exec --no-startup-id nm-applet # network manager
 exec --no-startup-id twmnd # notifications
 exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --tray # usb storage automounter
 
 # Compositor
-exec compton -bc --shadow-exclude 'x <= 3 && x2 >= 1363 && y <= 30 && y2 >= 765' --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
+exec compton -bc --shadow-exclude 'x <= 3 && x2 >= 1277 && y <= 30 && y2 >= 1021' --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
 
 # Wallpaper
-exec feh --bg-fill /media/data/Dokumenty/tapety/galaxy.jpg
+exec feh --bg-fill /media/data2/Dokumenty/Tapety/1425731791163.jpg
