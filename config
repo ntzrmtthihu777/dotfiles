@@ -12,7 +12,7 @@ font pango:Inconsolata 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -163,6 +163,7 @@ for_window [class="Firefox"] border none
 
 # 1 pixel border
 for_window [class="Termite"] border 1pixel
+for_window [class="URxvt"] border 1pixel
 
 # Floating windows
 #for_window [class="feh"] floating enable
@@ -233,4 +234,4 @@ exec --no-startup-id udiskie --tray # usb storage automounter
 exec compton -bc --shadow-exclude 'x <= 3 && x2 >= 1363 && y <= 30 && y2 >= 765' --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
 
 # Wallpaper
-exec feh --bg-fill /media/data/Dokumenty/tapety/galaxy.jpg
+exec feh --bg-fill /media/data/Dokumenty/tapety/utopia.jpg
