@@ -166,7 +166,7 @@ for_window [class="Termite"] border 1pixel
 for_window [class="URxvt"] border 1pixel
 
 # Floating windows
-#for_window [class="feh"] floating enable
+for_window [class="Gimp"] floating enable
 
 # Colors
 client.focused #d64937 #d64937 #dedede
