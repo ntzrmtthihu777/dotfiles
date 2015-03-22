@@ -91,10 +91,11 @@ if &term=='xterm'   " xterm supports 256 colours but doesn't set this
     set t_Co=256
 endif
 if &t_Co==256
-    colorscheme jellybeans  " Use nicer colourscheme
+    set background=dark     " Use dark background
+    colorscheme gruvbox  " Use nicer colourscheme
 endif
 if has("gui_running")
-    colorscheme jellybeans  " Gui sometimes doesn't set t_Co
+    colorscheme gruvbox  " Gui sometimes doesn't set t_Co
 
     set guioptions+=TlrbRLe " Bug workaround
     set guioptions-=TlrbRLe " Hide the toolbar and scrollbars, use text tabs
