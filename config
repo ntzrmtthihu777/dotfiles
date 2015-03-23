@@ -169,6 +169,10 @@ bindsym $mod+i exec firefox
 
 for_window [class="^.*"] border pixel 2
 gaps inner 12
+smart_borders no_gaps
+
+bindsym $mod+y gaps inner current minus 6
+bindsym $mod+u gaps inner current plus 6
 
 # class                 border  backgr. text    indicator
 client.focused          #676d3d #676d3d #ebdbb2 #676d3d
