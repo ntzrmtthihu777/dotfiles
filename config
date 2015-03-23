@@ -129,7 +129,6 @@ bindsym $mod+r mode "resize"
 # Power control mode
 set $power_control "[l]ock log[o]ut [s]uspend [h]ybernate [r]eboot [p]oweroff"
 mode  $power_control {
-
         bindsym l exec ~/.i3/lock.sh; mode "default"
         bindsym o exec i3-msg exit; mode "default"
         bindsym s exec systemctl suspend; mode "default"
@@ -159,19 +158,22 @@ bindsym --release Shift+Print exec --no-startup-id scrot -u
 bindsym $mod+i exec firefox
 
 # Borderless windows
-for_window [class="Firefox"] border none
+#for_window [class="Firefox"] border none
 
 # 1 pixel border
-for_window [class="Termite"] border 1pixel
-for_window [class="URxvt"] border 1pixel
+#for_window [class="Termite"] border 1pixel
+#for_window [class="URxvt"] border 1pixel
 
 # Floating windows
-for_window [class="Gimp"] floating enable
+#for_window [class="Gimp"] floating enable
+
+for_window [class="^.*"] border pixel 2
+gaps inner 12
 
 # class                 border  backgr. text    indicator
-client.focused          #d64937 #d64937 #dedede #d64937
-client.unfocused        #2d2d2d #2d2d2d #dedede #2d2d2d
-client.focused_inactive #2d2d2d #333333 #dedede #2d2d2d
+client.focused          #676d3d #676d3d #ebdbb2 #676d3d
+client.unfocused        #323232 #323232 #ebdbb2 #323232
+client.focused_inactive #323232 #333333 #ebdbb2 #323232
 client.urgent           #383a3b #383a3b #ee0000 #383a3b
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -183,14 +185,14 @@ bar {
     font pango:Inconsolata, FontAwesome 9
 
     colors {
-         background #2d2d2d
-         statusline #dedede
-         separator #2d2d2d
+         background #282828
+         statusline #ebdbb2
+         separator #323232
 
                             #border backgr. text
-         focused_workspace  #d64937 #d64937 #dedede
-         active_workspace   #2d2d2d #5f676a #dedede
-         inactive_workspace #2d2d2d #2d2d2d #888888
+         focused_workspace  #676d3d #676d3d #ebdbb2
+         active_workspace   #323232 #5f676a #ebdbb2
+         inactive_workspace #323232 #323232 #888888
          urgent_workspace   #333333 #900000 #ffffff
     }
 }
@@ -206,7 +208,8 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --tray # usb storage automounter
 
 # Compositor
-exec compton -bc -r 3 -l -1 -t -1 --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
+#exec compton -bc -r 3 -l -1 -t -1 --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
+exec compton -bc -r 3 -l -4 -t -4 --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
 
 # Wallpaper
-exec feh --bg-fill /media/data/Dokumenty/tapety/sunset.png
+exec feh --bg-tile /media/data/Dokumenty/tapety/dark_embroidery.png
