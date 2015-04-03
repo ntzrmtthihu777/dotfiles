@@ -1,21 +1,21 @@
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "bundle/delimitMate"]
-	path = bundle/delimitMate
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "bundle/Colorizer"]
-	path = bundle/Colorizer
+[submodule ".vim/bundle/Colorizer"]
+	path = .vim/bundle/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/MatchTag"]
-	path = bundle/MatchTag
+[submodule ".vim/bundle/MatchTag"]
+	path = .vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
