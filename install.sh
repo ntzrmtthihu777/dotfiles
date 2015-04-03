@@ -16,3 +16,5 @@ do
     mv ~/.config/$file ~/dotfiles_old/.config
     ln -s ~/dotfiles/.config/$file ~/.config/$file
 done
+
+git submodule update --init --recursive
