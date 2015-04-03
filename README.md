@@ -1,8 +1,12 @@
-#My dotfiles
+# My dotfiles
 
 Can be installed via the `install.sh` script. The script will back up the old dotfiles.
 
-##Vim plugins included
+## Screenshot
+
+![screenshot](https://raw.githubusercontent.com/Remedan/dotfiles/master/screenshot.png)
+
+## Vim plugins included
 
 * vim-airline
 * YouCompleteMe
