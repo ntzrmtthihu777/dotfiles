@@ -173,6 +173,8 @@ smart_borders no_gaps
 
 bindsym $mod+y gaps inner current minus 6
 bindsym $mod+u gaps inner current plus 6
+bindsym $mod+Shift+y gaps outer current minus 6
+bindsym $mod+Shift+u gaps outer current plus 6
 
 # class                 border  backgr. text    indicator
 client.focused          #676d3d #676d3d #ebdbb2 #676d3d
@@ -209,11 +211,11 @@ exec --no-startup-id nm-applet # network manager
 exec --no-startup-id twmnd # notifications
 exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
-exec --no-startup-id udiskie --tray # usb storage automounter
+exec --no-startup-id udiskie --smart-tray # usb storage automounter
 
 # Compositor
 #exec compton -bc -r 3 -l -1 -t -1 --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
 exec compton -bc -r 3 -l -4 -t -4 --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
 
 # Wallpaper
-exec feh --bg-tile /media/data/Dokumenty/tapety/dark_embroidery.png
+exec feh --bg-tile /media/data/dokumenty/tapety/dark_embroidery.png
