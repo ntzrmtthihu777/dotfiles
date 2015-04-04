@@ -46,3 +46,5 @@ URxvt.depth: 24
 ! LightGrey + White
 *color7: #a89984
 *color15: #ebdbb2
+
+rofi.highlightbg: #676d3d
