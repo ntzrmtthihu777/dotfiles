@@ -1,2 +1,7 @@
+.vim/spell
 .config/ranger/__pycache__/*
-.vimperator/info/*
+.config/ranger/history
+.config/ranger/bookmarks
+.config/ranger/tagged
+.vimperator/info/default/*
+!.vimperator/info/default/quickmarks

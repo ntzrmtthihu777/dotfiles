@@ -5,7 +5,7 @@ mkdir ~/.config
 mkdir ~/dotfiles_old
 mkdir ~/dotfiles_old/.config
 
-for file in `ls -A --ignore={install.sh,.config,.git*,README.md}`
+for file in `ls -A --ignore={install.sh,.config,.git,.gitignore,.gitmodules,README.md}`
 do
     mv ~/$file ~/dotfiles_old
     ln -s ~/dotfiles/$file ~/$file
