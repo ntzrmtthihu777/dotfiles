@@ -209,6 +209,7 @@ bar {
 exec setxkbmap -layout 'us,cz(qwerty)' && setxkbmap -option 'grp:shift_caps_toggle'
 
 # Applets
+exec --no-startup-id nm-applet # network manager
 exec --no-startup-id twmnd # notifications
 exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
