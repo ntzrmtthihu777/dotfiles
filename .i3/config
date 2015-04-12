@@ -217,7 +217,7 @@ exec --no-startup-id udiskie --smart-tray # usb storage automounter
 
 # Compositor
 #exec compton -bc -r 3 -l -1 -t -1 --shadow-exclude '_GTK_FRAME_EXTENTS@:c' --clear-shadow
-exec compton -b
+exec compton -b --config ~/.compton.conf
 
 # Wallpaper
 #exec feh --bg-tile /media/data/dokumenty/tapety/dark_embroidery.png
