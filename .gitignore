@@ -1,4 +1,6 @@
 .vim/spell
+.config/mpd/*
+!.config/mpd/mpd.conf
 .config/ranger/__pycache__/*
 .config/ranger/history
 .config/ranger/bookmarks

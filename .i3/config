@@ -207,6 +207,9 @@ exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --smart-tray # usb storage automounter
 
+# Musid Daemon
+exec --no-startup-id mpd ~/.config/mpd/mpd.conf
+
 # Compositor
 exec compton -b --config ~/.compton.conf
 
