@@ -156,6 +156,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && killall -SIGUSR1 i3statu
 bindsym --release Print exec --no-startup-id scrot
 bindsym --release Shift+Print exec --no-startup-id scrot -u
 
+# Media keys
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioStop exec playerctl stop
+
 # Applications
 bindsym $mod+i exec firefox
 
