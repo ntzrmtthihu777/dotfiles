@@ -168,6 +168,9 @@ bindsym $mod+i exec firefox
 # Borders
 for_window [class="^.*"] border pixel 2
 
+# Workspace assignment
+assign [class="Steam"] 5
+
 # Gaps
 gaps inner 12
 smart_borders no_gaps
