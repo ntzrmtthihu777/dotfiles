@@ -168,6 +168,9 @@ bindsym $mod+i exec firefox
 # Borders
 for_window [class="^.*"] border pixel 2
 
+# Workspace assignment
+assign [class="Steam"] 5
+
 # Gaps
 gaps inner 12
 smart_borders no_gaps
@@ -207,6 +210,7 @@ bar {
 exec setxkbmap -layout 'us,cz(qwerty)' && setxkbmap -option 'grp:shift_caps_toggle'
 
 # Applets
+exec --no-startup-id nm-applet # network manager
 exec --no-startup-id twmnd # notifications
 exec --no-startup-id dropbox
 exec --no-startup-id redshift-gtk
