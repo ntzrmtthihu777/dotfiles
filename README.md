@@ -12,10 +12,16 @@ Colours are from the excelent [gruvbox theme](https://github.com/morhetz/gruvbox
 
 ## Vim plugins included
 
-* vim-airline
-* YouCompleteMe
-* syntastic
-* NERD Tree
-* delimitMate
 * Colorizer
+* EasyMotion
+* Emmet-vim
+* Fugitive
 * MatchTags
+* NERD Tree
+* Tag List
+* YouCompleteMe
+* delimitMate
+* surround.vim
+* syntastic
+* vim-airline
+* vim-easy-align
