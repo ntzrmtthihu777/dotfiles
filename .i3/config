@@ -221,7 +221,7 @@ exec --no-startup-id udiskie --smart-tray # usb storage automounter
 exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 
 # Compositor
-exec compton -b --config ~/.compton.conf
+exec compton -b --config ~/.compton2.conf
 
 # Wallpaper
 exec feh --bg-fill /media/data2/Dokumenty/Tapety/1425731791163.jpg
