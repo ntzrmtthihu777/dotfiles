@@ -143,6 +143,12 @@ mode  $power_control {
 }
 bindsym $mod+n mode $power_control
 
+# Mode that ignores i3 keymappings
+mode "ignore i3" {
+    bindsym Shift+Escape mode "default"
+}
+bindsym $mod+m mode "ignore i3"
+
 # Audio controls (volume up, volume down, toggle mute)
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ && pkill -SIGRTMIN+3 i3blocks
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- && pkill -SIGRTMIN+3 i3blocks
