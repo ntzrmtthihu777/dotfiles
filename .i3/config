@@ -220,6 +220,7 @@ exec --no-startup-id dropbox
 exec --no-startup-id megasync
 exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --smart-tray # usb storage automounter
+exec --no-startup-id uim-toolbar-gtk3-systray
 
 # Musid daemon
 exec --no-startup-id mpd ~/.config/mpd/mpd.conf
