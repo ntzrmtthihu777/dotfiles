@@ -8,12 +8,12 @@ Can be installed via the `install.sh` script. The script will back up the old do
 
 ## Acknowledgements
 
-* Colours are from the excelent [gruvbox theme](https://github.com/morhetz/gruvbox)
+* Colours are from the [gruvbox theme](https://github.com/morhetz/gruvbox)
 * `.compton.conf` stolen from [twily.info](http://twily.info/)
 
 ## Zsh config
 
-I usually have the [grml zsh config](https://grml.org/zsh/) installed in /etc
+I usually have the [grml zsh config](https://grml.org/zsh/) installed in /etc,
 which is why my .zshrc is rather short.
 
 ## Vim plugins included
