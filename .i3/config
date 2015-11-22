@@ -229,4 +229,4 @@ exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 exec compton -b --config ~/.compton2.conf
 
 # Wallpaper
-exec feh --bg-fill /media/data/dokumenty/tapety/1435889901103.jpg
+exec feh --bg-fill /media/data/dokumenty/tapety/s01e25_1.png
