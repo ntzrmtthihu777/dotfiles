@@ -226,7 +226,7 @@ exec --no-startup-id uim-toolbar-gtk3-systray
 exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 
 # Compositor
-exec compton -b --config ~/.compton2.conf
+exec compton -b --config ~/.compton.conf
 
 # Wallpaper
 exec feh --bg-fill /media/data/dokumenty/tapety/s01e25_1.png
