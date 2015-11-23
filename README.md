@@ -32,3 +32,15 @@ which is why my .zshrc is rather short.
 * vim-airline
 * vim-easy-align
 * vim-glsl
+
+## Vim colourschemes
+
+* Bad Wolf
+* CodeSchool* ([source](http://astonj.com/tech/vim-for-ruby-rails-and-a-sexy-theme/))
+* Gruvbox
+* Inkpot
+* Jellybeans
+* Molokai
+* Mustang* ([source](http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484))
+
+_These don't have an official git repo AFAIK._
