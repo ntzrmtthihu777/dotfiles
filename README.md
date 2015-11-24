@@ -43,4 +43,4 @@ which is why my .zshrc is rather short.
 * Molokai
 * Mustang* ([source](http://hcalves.deviantart.com/art/Mustang-Vim-Colorscheme-98974484))
 
-_These don't have an official git repo AFAIK._
+_*These don't have an official git repo AFAIK._
