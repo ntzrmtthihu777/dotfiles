@@ -56,6 +56,8 @@ let g:airline_left_alt_sep = '|'
 let g:airline_right_alt_sep = '|'
 let g:airline#extensions#tabline#enabled = 1    " Enable nice tabline
 
+let g:NERDTreeDirArrows = 0   " Disable fancy arrows in NERDTree
+
 let delimitMate_expand_cr = 1
 
 """""""""""""""""""""""""""""
