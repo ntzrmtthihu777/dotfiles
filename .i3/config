@@ -17,10 +17,8 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec j4-dmenu-desktop
+# start a program launcher
 bindsym $mod+d exec rofi -show run
-
 
 # change focus
 bindsym $mod+h focus left
@@ -105,43 +103,49 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
 # Power control mode
 set $power_control "[l]ock log[o]ut [s]uspend [h]ibernate [r]eboot [p]oweroff"
 mode  $power_control {
-        bindsym l exec ~/.i3/lock.sh; mode "default"
-        bindsym o exec i3-msg exit; mode "default"
-        bindsym s exec systemctl suspend; mode "default"
-        bindsym h exec systemctl hibernate; mode "default"
-        bindsym r exec systemctl reboot; mode "default"
-        bindsym p exec systemctl poweroff; mode "default"
+    bindsym l exec ~/.i3/lock.sh; mode "default"
+    bindsym o exec i3-msg exit; mode "default"
+    bindsym s exec systemctl suspend; mode "default"
+    bindsym h exec systemctl hibernate; mode "default"
+    bindsym r exec systemctl reboot; mode "default"
+    bindsym p exec systemctl poweroff; mode "default"
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+n mode $power_control
+
+# Mode that ignores i3 keymappings
+mode "ignore i3" {
+    bindsym Shift+Escape mode "default"
+}
+bindsym $mod+m mode "ignore i3"
 
 # Audio controls (volume up, volume down, toggle mute)
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ && pkill -SIGRTMIN+3 i3blocks
@@ -206,7 +210,7 @@ bar {
     }
 }
 
-# Keyboard layouts, ctrl+alt to switch
+# Keyboard layouts, shift+capslock to switch
 exec setxkbmap -layout 'us,cz(qwerty)' && setxkbmap -option 'grp:shift_caps_toggle'
 
 # Applets
@@ -216,12 +220,13 @@ exec --no-startup-id dropbox
 exec --no-startup-id megasync
 exec --no-startup-id redshift-gtk
 exec --no-startup-id udiskie --smart-tray # usb storage automounter
+exec --no-startup-id uim-toolbar-gtk3-systray
 
-# Musid Daemon
+# Musid daemon
 exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 
 # Compositor
-exec compton -b --config ~/.compton2.conf
+exec compton -b --config ~/.compton.conf
 
 # Wallpaper
 exec feh --bg-fill /media/data2/Dokumenty/Tapety/1425731791163.jpg

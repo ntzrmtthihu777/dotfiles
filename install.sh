@@ -1,19 +1,20 @@
 #!/bin/bash
 
-mkdir ~/.config
+mkdir -p ~/.config
 
-mkdir ~/dotfiles_old
-mkdir ~/dotfiles_old/.config
+mkdir -p ~/dotfiles_old/.config
 
 cd ~/dotfiles
 
-for file in `ls -A --ignore={install.sh,.config,.git,.gitignore,.gitmodules,README.md}`
+BLACKLIST="-I install.sh -I .config -I .git -I .gitignore -I .gitmodules -I README.md -I screenshot.png"
+
+for file in `ls -A $BLACKLIST`
 do
     mv ~/$file ~/dotfiles_old
     ln -s ~/dotfiles/$file ~/$file
 done
 
-for file in `ls -A .config`
+for file in `ls -A -I .config .config`
 do
     mv ~/.config/$file ~/dotfiles_old/.config
     ln -s ~/dotfiles/.config/$file ~/.config/$file
