@@ -1,0 +1,10 @@
+alias weechat="weechat -d ${HOME}/.config/weechat"
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+aur() {
+	cd /tmp
+	git clone aur:"$1" ${@:2}
+	cd "$1"
+}
+export PATH=$PATH:$HOME/node_modules/.bin/
