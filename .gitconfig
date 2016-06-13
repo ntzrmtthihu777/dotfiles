@@ -1,7 +1,0 @@
-[user]
-	email = balakvojtech@gmail.com
-	name = Vojtech Balak
-[push]
-	default = simple
-[credential]
-	helper = cache
