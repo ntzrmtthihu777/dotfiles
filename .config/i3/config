@@ -2,7 +2,7 @@
 #
 # User guide: http://i3wm.org/docs/userguide.html
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -12,18 +12,18 @@ font pango:Inconsolata 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start a program launcher
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec dmenu_run
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+i focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
@@ -33,9 +33,9 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+i move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
@@ -54,9 +54,10 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -109,9 +110,9 @@ mode "resize" {
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym i resize shrink height 10 px or 10 ppt
     bindsym l resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
@@ -129,7 +130,7 @@ bindsym $mod+r mode "resize"
 # Power control mode
 set $power_control "[l]ock log[o]ut [s]uspend [h]ibernate [r]eboot [p]oweroff"
 mode  $power_control {
-    bindsym l exec ~/.i3/lock.sh; mode "default"
+    bindsym l exec ~/.config/i3/lock.sh; mode "default"
     bindsym o exec i3-msg exit; mode "default"
     bindsym s exec systemctl suspend; mode "default"
     bindsym h exec systemctl hibernate; mode "default"
@@ -148,85 +149,67 @@ mode "ignore i3" {
 bindsym $mod+m mode "ignore i3"
 
 # Audio controls (volume up, volume down, toggle mute)
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ && pkill -SIGRTMIN+3 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- && pkill -SIGRTMIN+3 i3blocks
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -SIGRTMIN+3 i3blocks
-
-# Sreen brightness controls (brightness up, brightness down)
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 && pkill -SIGRTMIN+2 i3blocks
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && pkill -SIGRTMIN+2 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.usb-Logitech_Logitech_G933_Gaming_Wireless_Headset-00.iec958-stereo +5% && pkill -SIGRTMIN+3 i3blocks #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.usb-Logitech_Logitech_G933_Gaming_Wireless_Headset-00.iec958-stereo -5% && pkill -SIGRTMIN+3 i3blocks #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.usb-Logitech_Logitech_G933_Gaming_Wireless_Headset-00.iec958-stereo toggle       && pkill -SIGRTMIN+3 i3blocks # mute sound
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ && pkill -SIGRTMIN+3 i3blocks
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- && pkill -SIGRTMIN+3 i3blocks
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle && pkill -SIGRTMIN+3 i3blocks
 
 # Printscreen saves screenshot (with shift only focused window)
 bindsym --release Print exec --no-startup-id scrot
 bindsym --release Shift+Print exec --no-startup-id scrot -u
 
 # Media keys
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioStop exec mpc stop
 
 # Applications
-bindsym $mod+i exec firefox
+bindsym $mod+w exec firefox
 
 # Borders
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Workspace assignment
 assign [class="Steam"] 5
 
-# Gaps
-gaps inner 12
-smart_borders no_gaps
-
-bindsym $mod+y gaps inner current minus 6
-bindsym $mod+u gaps inner current plus 6
-bindsym $mod+Shift+y gaps outer current minus 6
-bindsym $mod+Shift+u gaps outer current plus 6
-
 # class                 border  backgr. text    indicator
-client.focused          #676d3d #676d3d #ebdbb2 #676d3d
-client.unfocused        #323232 #323232 #ebdbb2 #323232
-client.focused_inactive #323232 #333333 #ebdbb2 #323232
+client.focused          #506070 #506070 #506070 #506070
+client.unfocused        #323232 #323232 #506070 #323232
+client.focused_inactive #323232 #333333 #506070 #323232
 client.urgent           #383a3b #383a3b #ee0000 #383a3b
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command i3blocks -c ~/.i3/i3blocks.conf
-    position top
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position bottom
     font pango:Inconsolata, FontAwesome 9
 
     colors {
-         background #282828
-         statusline #ebdbb2
-         separator  #756d59
+         background #3b3b3e
+         statusline #506070
+         separator  #506070
 
                             #border backgr. text
-         focused_workspace  #676d3d #676d3d #ebdbb2
-         active_workspace   #323232 #5f676a #ebdbb2
-         inactive_workspace #323232 #323232 #888888
+         focused_workspace  #506070 #506070 #3b3b3e
+         active_workspace   #506070 #3b3b3e #506070
+         inactive_workspace #3b3b3e #3b3b3e #506070
          urgent_workspace   #333333 #900000 #ffffff
     }
 }
-
-# Keyboard layouts, shift+capslock to switch
-exec setxkbmap -layout 'us,cz(qwerty)' && setxkbmap -option 'grp:shift_caps_toggle'
+#exec setxkbmap -layout 'us,us(colemak)'
+#exec setxkbmap -layout 'grp:alt_shift_toggle,terminate:ctrl_alt_bksp,compose:menu,caps:swapescape'
+exec fcitx -r -d
 
 # Applets
-exec --no-startup-id nm-applet # network manager
-exec --no-startup-id twmnd # notifications
-exec --no-startup-id dropbox
-exec --no-startup-id megasync
-exec --no-startup-id redshift-gtk
-exec --no-startup-id udiskie --smart-tray # usb storage automounter
-exec --no-startup-id uim-toolbar-gtk3-systray
-
 # Musid daemon
 exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 
 # Compositor
-exec compton -b --config ~/.compton.conf
+exec compton -b --config ~/.config/compton.conf
 
 # Wallpaper
-exec feh --bg-fill /media/data/dokumenty/tapety/steampunk_rain.jpg
+exec feh --bg-fill /usr/share/archlinux/wallpaper/archlinux-simplyblack.png
