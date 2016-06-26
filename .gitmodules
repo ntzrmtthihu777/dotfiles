@@ -4,3 +4,9 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
+[submodule ".vim/bundle/vim-sort-motion"]
+	path = .vim/bundle/vim-sort-motion
+	url = git@github.com:christoomey/vim-sort-motion.git
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
