@@ -1,12 +1,12 @@
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
+[submodule ".config/nvim/bundle/vim-surround"]
+	path = .config/nvim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
+[submodule ".config/nvim/bundle/vim-pathogen"]
+	path = .config/nvim/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
-[submodule ".vim/bundle/vim-sort-motion"]
-	path = .vim/bundle/vim-sort-motion
+[submodule ".config/nvim/bundle/vim-sort-motion"]
+	path = .config/nvim/bundle/vim-sort-motion
 	url = git@github.com:christoomey/vim-sort-motion.git
-[submodule ".vim/bundle/vim-commentary"]
-	path = .vim/bundle/vim-commentary
+[submodule ".config/nvim/bundle/vim-commentary"]
+	path = .config/nvim/bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
