@@ -1,3 +1,4 @@
+alias vim=nvim
 export EDITOR=nvim
 alias weechat="weechat -d ${HOME}/.config/weechat"
 aur() {
@@ -12,3 +13,5 @@ eval $(thefuck --alias)
 autoload -Uz promptinit
 promptinit
 prompt elite2 blue
+unsetopt FLOW_CONTROL
+stty -ixon -ixoff 2>/dev/null
