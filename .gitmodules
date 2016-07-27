@@ -19,3 +19,12 @@
 [submodule ".config/nvim/bundle/vim-cscope-maps"]
 	path = .config/nvim/bundle/vim-cscope-maps
 	url = git:joe-skb7/cscope-maps.git
+[submodule ".config/nvim/bundle/vim-licenses"]
+	path = .config/nvim/bundle/vim-licenses
+	url = git:antoyo/vim-licenses.git
+[submodule ".config/nvim/bundle/vim-magnum"]
+	path = .config/nvim/bundle/vim-magnum
+	url = git:glts/vim-magnum.git
+[submodule ".config/nvim/bundle/vim-radical"]
+	path = .config/nvim/bundle/vim-radical
+	url = git:glts/vim-radical.git
