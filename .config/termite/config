@@ -19,7 +19,7 @@ search_wrap = true
 cursor_blink = on
 
 # "block", "underline" or "ibeam"
-cursor_shape = underline
+cursor_shape = block
 
 # $BROWSER is used by default
 browser = xdg-open
