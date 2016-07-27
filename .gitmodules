@@ -10,3 +10,12 @@
 [submodule ".config/nvim/bundle/vim-commentary"]
 	path = .config/nvim/bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
+[submodule ".config/nvim/bundle/vim-pkgbuild"]
+	path = .config/nvim/bundle/vim-pkgbuild
+	url = git@github.com:Firef0x/PKGBUILD.vim.git
+[submodule ".config/nvim/bundle/vim-linux-coding-style"]
+	path = .config/nvim/bundle/vim-linux-coding-style
+	url = git:vivien/vim-linux-coding-style.git
+[submodule ".config/nvim/bundle/vim-cscope-maps"]
+	path = .config/nvim/bundle/vim-cscope-maps
+	url = git:joe-skb7/cscope-maps.git
