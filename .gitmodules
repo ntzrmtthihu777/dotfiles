@@ -28,3 +28,6 @@
 [submodule ".config/nvim/bundle/vim-radical"]
 	path = .config/nvim/bundle/vim-radical
 	url = git:glts/vim-radical.git
+[submodule ".config/nvim/bundle/vim-repeat"]
+	path = .config/nvim/bundle/vim-repeat
+	url = git:tpope/vim-repeat
