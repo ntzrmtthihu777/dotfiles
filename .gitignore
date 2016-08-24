@@ -9,3 +9,4 @@
 .vimperator/info/default/*
 !.vimperator/info/default/quickmarks
 .config/nvim/.netrwhist
+*.log
