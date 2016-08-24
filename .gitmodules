@@ -31,3 +31,9 @@
 [submodule ".config/nvim/bundle/vim-repeat"]
 	path = .config/nvim/bundle/vim-repeat
 	url = git:tpope/vim-repeat
+[submodule ".config/nvim/bundle/vim-markdown"]
+	path = .config/nvim/bundle/vim-markdown
+	url = git:tpope/vim-markdown
+[submodule ".config/nvim/bundle/vim-github-markdown"]
+	path = .config/nvim/bundle/vim-github-markdown
+	url = git:jtratner/vim-flavored-markdown.git
