@@ -45,7 +45,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -206,7 +206,7 @@ bar {
 exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 
 # Compositor
-exec compton -b --config ~/.config/compton.conf
+exec --no-startup-id compton -b --config ~/.config/compton.conf
 
 # Wallpaper
-exec feh --bg-fill ~/.config/i3/background.png
+exec --no-startup-id feh --bg-fill ~/.config/i3/background.png
